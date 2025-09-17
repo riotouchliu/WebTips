@@ -31,6 +31,11 @@ const router = createRouter({
       path: '/hot',
       name: 'Hot',
       component: () => import('../views/HotView.vue'),
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: () => import('../views/SearchView.vue'),
     }
   ],
 })
