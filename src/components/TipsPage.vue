@@ -1,52 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { sectionDataManager } from '../common/SectionData';
 import TipsSection from './TipsSection.vue';
-import type { CardType } from './TipsSection.vue';
 
-// Define the structure for the section data
-interface Section {
-  title: string;
-  cards: CardType[];
-}
+const sectionData = sectionDataManager.getSectionData();
 
-interface SectionData {
-  new: Section;
-  device: Section;
-  app: Section;
-}
-
-// Apply the type to the ref
-const sectionData = ref<SectionData>({
-  new: {
-    title: 'NEW',
-    cards: [
-      { text: 'New Function', type: 'new' }
-    ]
-  },
-  device: {
-    title: 'DEVICE',
-    cards: [
-      { text: 'RK3588', type: 'device' },
-      { text: 'ADV311D2', type: 'device' },
-      { text: 'ADV100', type: 'device' },
-      { text: '982', type: 'device' },
-      { text: 'LTS', type: 'device' }
-    ]
-  },
-  app: {
-    title: 'APP',
-    cards: [
-      { text: 'Umind', type: 'app', iconContent: '<div class="bg-blue-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">U</div>' },
-      { text: 'UFile', type: 'app', iconContent: '<div class="bg-orange-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">F</div>' },
-      { text: 'Setting', type: 'app', iconContent: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" /></svg>' },
-      { text: 'AI Assistant', type: 'app', iconContent: '<div class="bg-purple-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">AI</div>' },
-      { text: 'Record Screen', type: 'app', iconContent: '<div class="bg-cyan-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">R</div>' },
-      { text: 'UPicture', type: 'app', iconContent: '<div class="bg-lime-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">P</div>' },
-      { text: 'Calculator', type: 'app', iconContent: '<div class="bg-blue-300 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">C</div>' },
-      { text: 'Calendar', type: 'app', iconContent: '<div class="bg-red-500 rounded-lg w-full h-full flex items-center justify-center text-white text-3xl">C</div>' }
-    ]
-  }
-});
 </script>
 <template>
   <div class="bg-gray-50 min-h-screen">
