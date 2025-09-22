@@ -38,13 +38,14 @@ const datas = ref<BaseDataTranslation>({
     section_intro_title: 'UPlay：您的多合一媒体播放解决方案',
     section_intro_para1: 'UPlay以卓越的质量提供无缝和多功能的视频播放。支持各种来源，同时保持原始清晰度。自定义播放列表、播放顺序，甚至通过一键截图捕获令人惊叹的帧。无论是娱乐、教育还是演示，UPlay都能提供流畅、引人入胜和动态的媒体体验。',
     section_intro_url: '',
+    feature_title: 'URecord 特性',
     feature_list: [
       {
         title: '1: 实时注释记录',
         desc: '录音笔支持录制过程中的实时注释和笔记，有助于强调关键内容，让视频更易懂，提升整体表达效果。',
         url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
       },
-      {
+       {
         title: '2: 4K屏幕录制',
         desc: '支持4K高清屏幕录制，精准捕捉内容，完美还原每一个细节，无论是课堂教学还是商务会议，该函数都是满足您教学或会议质量需求的理想选择。',
         url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
@@ -58,7 +59,7 @@ const datas = ref<BaseDataTranslation>({
         title: '4: 集成UMind',
         desc: 'URecord支持Ufile的二维码分享函数，为录制的文件生成专属二维码，实现便捷高效的视频分享。',
         url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
-      },
+      }
     ]
   },
   en : {
@@ -67,27 +68,28 @@ const datas = ref<BaseDataTranslation>({
     section_intro_title: 'UPlay：您的多合一媒体播放解决方案',
     section_intro_para1: 'UPlay以卓越的质量提供无缝和多功能的视频播放。支持各种来源，同时保持原始清晰度。自定义播放列表、播放顺序，甚至通过一键截图捕获令人惊叹的帧。无论是娱乐、教育还是演示，UPlay都能提供流畅、引人入胜和动态的媒体体验。',
     section_intro_url: '',
+    feature_title: 'URecord 特性',
     feature_list: [
       {
-        title: '1: 实时注释记录',
-        desc: '录音笔支持录制过程中的实时注释和笔记，有助于强调关键内容，让视频更易懂，提升整体表达效果。',
-        url: ''
+        title: '1: Real-time Annotations Recording',
+        desc: 'The recording pen supports real-time annotations and notes during the recording process, helping to emphasize key content, making the video more understandable and improving the overall expression effect.',
+        url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
       },
       {
-        title: '2: 4K屏幕录制',
-        desc: '支持4K高清屏幕录制，精准捕捉内容，完美还原每一个细节，无论是课堂教学还是商务会议，该函数都是满足您教学或会议质量需求的理想选择。',
-        url: ''
+        title: '2: 4K Screen Recording',
+        desc: 'The recording pen supports real-time annotations and notes during the recording process, helping to emphasize key content, making the video more understandable and improving the overall expression effect.',
+        url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
       },
       {
-        title: '3: 本地云存储',
-        desc: '支持4K高清屏幕录制，精准捕捉内容，完美还原每一个细节，无论是课堂教学还是商务会议，该函数都是满足您教学或会议质量需求的理想选择。',
-        url: ''
+        title: '3: Local Cloud Storage',
+        desc: 'Supports 4K high-definition screen recording, accurately captures content, and perfectly restores every detail. Whether it is classroom teaching or business meetings, this function is an ideal choice to meet your teaching or meeting quality needs.',
+        url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
       },
       {
-        title: '4: 集成UMind',
-        desc: 'URecord支持Ufile的二维码分享函数，为录制的文件生成专属二维码，实现便捷高效的视频分享。',
-        url: ''
-      },
+        title: '4: Ufile QR code sharing',
+        desc: 'Urecord supports Ufile s QR code sharing function, which generates exclusive QR codes for recorded files to achieve convenient and efficient video sharing.',
+        url: 'https://riotouch.com/upload_img/products/91/fcbac41056efca3cbdfa6509e7a983.webp'
+      }
     ]
   }
 })
@@ -179,12 +181,12 @@ onMounted(() => {
   <main class="main-container p-8 custom-shadow">
 
     <!-- Header Section -->
-    <header class="text-center mb-12">
+    <header class="text-center">
       <h1 class="text-4xl font-bold text-gray-800 mb-2 pb-4">{{ datas[currentLang].title }}</h1>
-      <p class="text-lg text-gray-600 pb-2">{{ datas[currentLang].subtitle }}</p>
+      <p class="text-lg text-gray-600 mb-2">{{ datas[currentLang].subtitle }}</p>
 
       <!-- Language Switcher -->
-      <div class="mt-4">
+      <div class="mt-4 mb-4">
         <button @click="setLanguage('zh')"
           :class="['px-4 py-2 rounded-full font-bold', currentLang === 'zh' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800']">
           中文
@@ -193,12 +195,11 @@ onMounted(() => {
           :class="['ml-2 px-4 py-2 rounded-full font-bold', currentLang === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800']">
           English
         </button>
-        <p>.</p>
       </div>
     </header>
 
     <!-- Introduction Section -->
-    <section id="introduction" class="bg-gray-100 p-8 rounded-2xl mb-12 custom-shadow">
+    <section id="introduction" class="bg-gray-100 p-8 rounded-2xl custom-shadow">
       <h2 class="text-3xl font-bold text-gray-800 pb-4 text-center">{{ datas[currentLang].section_intro_title }}
       </h2>
       <div class="flex flex-col md:flex-row items-center">
@@ -220,7 +221,7 @@ onMounted(() => {
 
     <!-- How-to Guide Section -->
     <section id="how-to-guide" class="bg-gray-100 p-8 rounded-2xl custom-shadow">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center pb-6">{{
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">{{
         datas[currentLang].feature_title }}
       </h2>
       <div v-for="(card,index) in datas[currentLang].feature_list" :key="index" >
@@ -229,7 +230,7 @@ onMounted(() => {
           'flex flex-col': true,
           'md:flex-row': index % 2 === 0,
           'md:flex-row-reverse': index % 2 !== 0,
-          'items-center bg-white p-6 rounded-xl custom-shadow mb-8': true
+          'items-center bg-white p-6 rounded-xl custom-shadow': true
         }">
           <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0"
           :class="{
