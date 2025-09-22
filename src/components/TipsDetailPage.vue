@@ -5,6 +5,7 @@ import UmindTemple from './apps/UmindTemple.vue';
 import UFileTemple from './apps/UFileTemple.vue';
 import UCutTemple from './apps/UCutTemple.vue';
 import UPlayTemple from './apps/UPlayTemple.vue';
+import BaseAppTemplate from './apps/BaseAppTemplate.vue';
 
 </script>
 <template>
@@ -13,6 +14,6 @@ import UPlayTemple from './apps/UPlayTemple.vue';
     <!-- Header -->
     <TopBar name="Umind" />
     <!-- Main Container -->
-    <UPlayTemple/>
+    <BaseAppTemplate/>
   </div>
 </template>
